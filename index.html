@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sardionix Supply & Services Ltd</title>
+
+  <!-- ── SECURITY HEADERS ── -->
+  <!-- CSP: external files mean we no longer need 'unsafe-inline' for scripts or styles -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://images.unsplash.com data: blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <img src="Content/RealLogo.svg" alt="Sardionix S&amp;S Ltd" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#booking">Book</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Contact Us</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#booking">Book</a>
+  <a href="#contact">Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <!-- 2x2 industrial image grid background -->
+  <div class="hero-bg">
+    <div class="hero-bg-img"></div>
+    <div class="hero-bg-img"></div>
+    <div class="hero-bg-img"></div>
+    <div class="hero-bg-img"></div>
+  </div>
+  <div class="hero-bg-overlay"></div>
+
+  <!-- Centered content -->
+  <div class="hero-content">
+    <div class="hero-eyebrow">Empowering Innovation, Health &amp; Safety</div>
+    <h1>Sardionix <em>Supply</em><br />&amp; Service Ltd</h1>
+    <p class="hero-desc">We help businesses operate cleaner, safer, and smarter — through expert hygiene consulting,
+      reliable product supply, and multilingual technical support across Suriname &amp; Curaçao.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-primary">Explore Services</a>
+      <a href="#booking" class="btn-ghost">Book a Consultation</a>
+    </div>
+  </div>
+
+  <!-- Full-width client carousel -->
+  <div class="hero-clients">
+    <div class="hero-clients-track-wrap">
+      <div class="hero-clients-track">
+        <!-- Set 1 -->
+        <svg viewBox="0 0 160 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-client-logo">
+          <path d="M8 5 C8 5 24 3 24 17 C24 23 17 28 10 28 L5 28 C5 28 1 28 1 23 L1 10 C1 7.5 4.5 5 8 5Z"
+            fill="currentColor" opacity="0.8" />
+          <path d="M4 10 C4 10 20 8 20 22 C20 28 13 33 6 33 L1 33 L1 12 C1 11 2.5 10 4 10Z" fill="currentColor" />
+          <rect x="7" y="14" width="11" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"
+            opacity="0.9" />
+          <path d="M7 17.5 L12.5 20.5 L18 17.5" stroke="currentColor" stroke-width="1.6" fill="none" opacity="0.9" />
+          <line x1="12.5" y1="20.5" x2="12.5" y2="25" stroke="currentColor" stroke-width="1.6" opacity="0.9" />
+          <text x="28" y="20" font-family="Inter,sans-serif" font-weight="800" font-size="13" fill="currentColor"
+            letter-spacing="0.5">SARDIONIX</text>
+          <text x="28" y="34" font-family="Inter,sans-serif" font-weight="400" font-size="9" fill="currentColor"
+            opacity="0.65">S&amp;S Ltd.</text>
+        </svg>
+        <svg viewBox="0 0 160 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-client-logo">
+          <path d="M8 5 C8 5 24 3 24 17 C24 23 17 28 10 28 L5 28 C5 28 1 28 1 23 L1 10 C1 7.5 4.5 5 8 5Z"
+            fill="currentColor" opacity="0.8" />
+          <path d="M4 10 C4 10 20 8 20 22 C20 28 13 33 6 33 L1 33 L1 12 C1 11 2.5 10 4 10Z" fill="currentColor" />
+          <rect x="7" y="14" width="11" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"
+            opacity="0.9" />
+          <path d="M7 17.5 L12.5 20.5 L18 17.5" stroke="currentColor" stroke-width="1.6" fill="none" opacity="0.9" />
+          <line x1="12.5" y1="20.5" x2="12.5" y2="25" stroke="currentColor" stroke-width="1.6" opacity="0.9" />
+          <text x="28" y="20" font-family="Inter,sans-serif" font-weight="800" font-size="13" fill="currentColor"
+            letter-spacing="0.5">SARDIONIX</text>
+          <text x="28" y="34" font-family="Inter,sans-serif" font-weight="400" font-size="9" fill="currentColor"
+            opacity="0.65">Supply &amp; Service</text>
+        </svg>
+        <svg viewBox="0 0 180 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-client-logo"
+          style="width:130px">
+          <circle cx="20" cy="22" r="14" fill="none" stroke="currentColor" stroke-width="2" />
+          <path d="M13 22 L20 15 L27 22 L20 29Z" fill="currentColor" opacity="0.6" />
+          <text x="42" y="27" font-family="Inter,sans-serif" font-weight="700" font-size="13"
+            fill="currentColor">Placeholder Co.</text>
+        </svg>
+        <svg viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-client-logo"
+          style="width:110px">
+          <rect x="2" y="12" width="20" height="20" rx="3" fill="currentColor" opacity="0.4" />
+          <rect x="8" y="8" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2" />
+          <rect x="14" y="4" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"
+            opacity="0.5" />
+          <text x="42" y="26" font-family="Inter,sans-serif" font-weight="700" font-size="13"
+            fill="currentColor">ClientName</text>
+        </svg>
+        <svg viewBox="0 0 100 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-client-logo"
+          style="width:80px">
+          <rect x="2" y="8" width="28" height="28" rx="5" fill="none" stroke="currentColor" stroke-width="2" />
+          <path d="M8 5 C8 5 24 3 24 17 C24 23 17 28 10 28 L5 28 L5 9 C5 7 6.5 5 8 5Z" fill="currentColor"
+            opacity="0.5" />
+          <text x="36" y="26" font-family="Inter,sans-serif" font-weight="700" font-size="14"
+            fill="currentColor">S&amp;S</text>
+        </svg>
+        <!-- Set 2 (duplicate for seamless loop) -->
+        <svg viewBox="0 0 160 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-client-logo">
+          <path d="M8 5 C8 5 24 3 24 17 C24 23 17 28 10 28 L5 28 C5 28 1 28 1 23 L1 10 C1 7.5 4.5 5 8 5Z"
+            fill="currentColor" opacity="0.8" />
+          <path d="M4 10 C4 10 20 8 20 22 C20 28 13 33 6 33 L1 33 L1 12 C1 11 2.5 10 4 10Z" fill="currentColor" />
+          <rect x="7" y="14" width="11" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"
+            opacity="0.9" />
+          <path d="M7 17.5 L12.5 20.5 L18 17.5" stroke="currentColor" stroke-width="1.6" fill="none" opacity="0.9" />
+          <line x1="12.5" y1="20.5" x2="12.5" y2="25" stroke="currentColor" stroke-width="1.6" opacity="0.9" />
+          <text x="28" y="20" font-family="Inter,sans-serif" font-weight="800" font-size="13" fill="currentColor"
+            letter-spacing="0.5">SARDIONIX</text>
+          <text x="28" y="34" font-family="Inter,sans-serif" font-weight="400" font-size="9" fill="currentColor"
+            opacity="0.65">S&amp;S Ltd.</text>
+        </svg>
+        <svg viewBox="0 0 160 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-client-logo">
+          <path d="M8 5 C8 5 24 3 24 17 C24 23 17 28 10 28 L5 28 C5 28 1 28 1 23 L1 10 C1 7.5 4.5 5 8 5Z"
+            fill="currentColor" opacity="0.8" />
+          <path d="M4 10 C4 10 20 8 20 22 C20 28 13 33 6 33 L1 33 L1 12 C1 11 2.5 10 4 10Z" fill="currentColor" />
+          <rect x="7" y="14" width="11" height="11" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"
+            opacity="0.9" />
+          <path d="M7 17.5 L12.5 20.5 L18 17.5" stroke="currentColor" stroke-width="1.6" fill="none" opacity="0.9" />
+          <line x1="12.5" y1="20.5" x2="12.5" y2="25" stroke="currentColor" stroke-width="1.6" opacity="0.9" />
+          <text x="28" y="20" font-family="Inter,sans-serif" font-weight="800" font-size="13" fill="currentColor"
+            letter-spacing="0.5">SARDIONIX</text>
+          <text x="28" y="34" font-family="Inter,sans-serif" font-weight="400" font-size="9" fill="currentColor"
+            opacity="0.65">Supply &amp; Service</text>
+        </svg>
+        <svg viewBox="0 0 180 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-client-logo"
+          style="width:130px">
+          <circle cx="20" cy="22" r="14" fill="none" stroke="currentColor" stroke-width="2" />
+          <path d="M13 22 L20 15 L27 22 L20 29Z" fill="currentColor" opacity="0.6" />
+          <text x="42" y="27" font-family="Inter,sans-serif" font-weight="700" font-size="13"
+            fill="currentColor">Placeholder Co.</text>
+        </svg>
+        <svg viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-client-logo"
+          style="width:110px">
+          <rect x="2" y="12" width="20" height="20" rx="3" fill="currentColor" opacity="0.4" />
+          <rect x="8" y="8" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2" />
+          <rect x="14" y="4" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"
+            opacity="0.5" />
+          <text x="42" y="26" font-family="Inter,sans-serif" font-weight="700" font-size="13"
+            fill="currentColor">ClientName</text>
+        </svg>
+        <svg viewBox="0 0 100 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-client-logo"
+          style="width:80px">
+          <rect x="2" y="8" width="28" height="28" rx="5" fill="none" stroke="currentColor" stroke-width="2" />
+          <path d="M8 5 C8 5 24 3 24 17 C24 23 17 28 10 28 L5 28 L5 9 C5 7 6.5 5 8 5Z" fill="currentColor"
+            opacity="0.5" />
+          <text x="36" y="26" font-family="Inter,sans-serif" font-weight="700" font-size="14"
+            fill="currentColor">S&amp;S</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats pinned to bottom -->
+  <div class="hero-stats-bar">
+    <div class="hero-stat">
+      <div class="hero-stat-num">9<span>+</span></div>
+      <div class="hero-stat-label">Services Offered</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">2</div>
+      <div class="hero-stat-label">Countries Active</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">6<span>+</span></div>
+      <div class="hero-stat-label">Certifications</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">10<span>+</span></div>
+      <div class="hero-stat-label">Years of Expertise</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div
+  style="background:var(--navy);border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05);padding:18px 24px;">
+  <div
+    style="max-width:var(--max);margin:0 auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:center;">
+    <span
+      style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.35);">Certified
+      by</span>
+    <span style="width:1px;height:20px;background:rgba(255,255,255,0.1);display:inline-block;"></span>
+    <span
+      style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:6px;"><span
+        style="width:5px;height:5px;border-radius:50%;background:var(--orange);display:inline-block;"></span>EHEDG</span>
+    <span
+      style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:6px;"><span
+        style="width:5px;height:5px;border-radius:50%;background:var(--orange);display:inline-block;"></span>HACCP</span>
+    <span
+      style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:6px;"><span
+        style="width:5px;height:5px;border-radius:50%;background:var(--orange);display:inline-block;"></span>CODEX
+      ALIMENTARIUS</span>
+    <span
+      style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:6px;"><span
+        style="width:5px;height:5px;border-radius:50%;background:var(--orange);display:inline-block;"></span>3-A
+      Sanitary Standard</span>
+    <span
+      style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:6px;"><span
+        style="width:5px;height:5px;border-radius:50%;background:var(--orange);display:inline-block;"></span>Food Safety
+      Management</span>
+    <span
+      style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:6px;"><span
+        style="width:5px;height:5px;border-radius:50%;background:var(--orange);display:inline-block;"></span>UV Drinking
+      Water</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-center reveal">
+      <p class="section-tag">What We Offer</p>
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-sub">Click a column to explore — it slides open to reveal what we do.</p>
+    </div>
+    <div class="services-cols reveal">
+      <!-- Distribution -->
+      <div class="svc-col active" data-img="dist">
+        <div class="svc-col-inner">
+          <div class="svc-label-vertical">Distribution</div>
+          <div class="svc-content">
+            <div class="svc-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                <line x1="12" y1="22.08" x2="12" y2="12" />
+              </svg>
+            </div>
+            <p class="svc-cat">Distribution</p>
+            <h3 class="svc-title">Branded Product Supply</h3>
+            <p class="svc-desc">High-quality branded products tailored to various industries — delivered reliably, on
+              time.</p>
+            <ul class="svc-items">
+              <li>Branded Product Supply</li>
+              <li>Food Safety Inspection Workflows</li>
+              <li>Operational Diagnostics</li>
+            </ul>
+            <a href="#contact" class="svc-link">Get a Quote →</a>
+          </div>
+        </div>
+      </div>
+      <!-- Consulting -->
+      <div class="svc-col" data-img="cons">
+        <div class="svc-col-inner">
+          <div class="svc-label-vertical">Consulting</div>
+          <div class="svc-content">
+            <div class="svc-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+            </div>
+            <p class="svc-cat">Consulting</p>
+            <h3 class="svc-title">Industrial Hygiene &amp; Food Safety</h3>
+            <p class="svc-desc">Expert consulting to enhance workplace hygiene, ensure compliance, and safeguard public
+              health through HACCP-based strategies.</p>
+            <ul class="svc-items">
+              <li>Industrial Hygiene Consulting</li>
+              <li>Food Safety Solutions (HACCP)</li>
+              <li>Compliance Strategies</li>
+              <li>Training Programs</li>
+            </ul>
+            <a href="#contact" class="svc-link">Book a Consultation →</a>
+          </div>
+        </div>
+      </div>
+      <!-- Support -->
+      <div class="svc-col" data-img="supp">
+        <div class="svc-col-inner">
+          <div class="svc-label-vertical">Support</div>
+          <div class="svc-content">
+            <div class="svc-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+              </svg>
+            </div>
+            <p class="svc-cat">Support</p>
+            <h3 class="svc-title">Technical Support &amp; Pest Control</h3>
+            <p class="svc-desc">Multilingual technical support for product inquiries, troubleshooting, and targeted pest
+              &amp; mosquito control.</p>
+            <ul class="svc-items">
+              <li>Technical Support Services</li>
+              <li>Pest &amp; Mosquito Control</li>
+              <li>Maintenance &amp; Troubleshooting</li>
+            </ul>
+            <a href="#contact" class="svc-link">Contact Support →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img class="about-img" src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=700&q=80"
+          alt="Sardionix team" />
+        <div class="about-float">
+          <div class="about-float-num">10+</div>
+          <div class="about-float-label">Years of expertise</div>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="section-tag">Our Story</p>
+        <h2 class="section-title">Built on Precision &amp; Strategic Foresight</h2>
+        <p>Sardionix Supply &amp; Services Ltd. was born from a vision: to streamline technical support and product
+          supply into a single, resilient brand that businesses can trust.</p>
+        <p>Founded on the principles of precision, reliability, and strategic foresight, Sardionix has grown into a
+          multidisciplinary force delivering consultancy, branded products, and operational solutions.</p>
+        <ul class="about-list">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+              stroke-linecap="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Operational excellence across Suriname &amp; Curaçao
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+              stroke-linecap="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Trusted partner for industrial hygiene &amp; food safety
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+              stroke-linecap="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Multilingual technical support
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+              stroke-linecap="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Continually expanding into new territories
+          </li>
+        </ul>
+        <a href="#contact" class="btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="certs" id="certifications">
+  <div class="container">
+    <div class="section-center reveal">
+      <p class="section-tag">Standards We Uphold</p>
+      <h2 class="section-title">Certifications &amp; Memberships</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.5)">We hold internationally recognised certifications and
+        are proud members of leading professional bodies.</p>
+    </div>
+    <div class="certs-grid reveal">
+      <div class="cert-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.6"
+          stroke-linecap="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        <div class="cert-name">EHEDG Member</div>
+        <div class="cert-sub">European Hygienic Engineering &amp; Design Group</div>
+      </div>
+      <div class="cert-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.6"
+          stroke-linecap="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+        <div class="cert-name">HACCP Certified</div>
+        <div class="cert-sub">Hazard Analysis &amp; Critical Control Points</div>
+      </div>
+      <div class="cert-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.6"
+          stroke-linecap="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="2" y1="12" x2="22" y2="12" />
+          <path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
+        </svg>
+        <div class="cert-name">CODEX ALIMENTARIUS</div>
+        <div class="cert-sub">Global Food Safety Standards</div>
+      </div>
+      <div class="cert-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.6"
+          stroke-linecap="round">
+          <path
+            d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
+        </svg>
+        <div class="cert-name">3-A Sanitary Standard</div>
+        <div class="cert-sub">Hygienic Equipment Design &amp; Sanitation</div>
+      </div>
+      <div class="cert-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.6"
+          stroke-linecap="round">
+          <path d="M12 2v6m0 0C9 8 6 11 6 15a6 6 0 0012 0c0-4-3-7-6-7z" />
+        </svg>
+        <div class="cert-name">UV Drinking Water</div>
+        <div class="cert-sub">Safe Water for Food Environments</div>
+      </div>
+      <div class="cert-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.6"
+          stroke-linecap="round">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <line x1="16" y1="13" x2="8" y2="13" />
+          <line x1="16" y1="17" x2="8" y2="17" />
+          <polyline points="10 9 9 9 8 9" />
+        </svg>
+        <div class="cert-name">Food Safety Management</div>
+        <div class="cert-sub">International Management Systems</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+  <div class="container">
+    <div class="section-center reveal">
+      <p class="section-tag">Ready to Start?</p>
+      <h2 class="section-title">Book a Service</h2>
+      <p class="section-sub">Choose a service and we'll schedule the right solution for your business.</p>
+    </div>
+    <div class="booking-grid reveal">
+      <div class="booking-card">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+        <h3 class="booking-name">Food Safety Audit</h3>
+        <p class="booking-meta">Duration: 12 hours</p>
+        <span class="booking-price">Project Based</span>
+        <a href="#contact" class="booking-btn">Request a Quote</a>
+      </div>
+      <div class="booking-card">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        <h3 class="booking-name">Industrial Hygiene</h3>
+        <p class="booking-meta">Duration: 12 hours</p>
+        <span class="booking-price">Project Based</span>
+        <a href="#contact" class="booking-btn">Request a Quote</a>
+      </div>
+      <div class="booking-card">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+        </svg>
+        <h3 class="booking-name">Pest &amp; Mosquito Control</h3>
+        <p class="booking-meta">Duration: 1 hour</p>
+        <span class="booking-price">Free Inspection</span>
+        <a href="#contact" class="booking-btn">Book Free Inspection</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="section-tag">Get In Touch</p>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p style="font-size:15px;color:var(--grey-text);line-height:1.7;margin-bottom:32px;">Reach out for questions
+          about our services, pricing, or to schedule a consultation. We operate from Suriname and Curaçao.</p>
+        <div class="contact-loc">
+          <strong>Paramaribo, Suriname</strong>
+          <span>+597 8968010</span>
+        </div>
+        <div class="contact-loc">
+          <strong>Willemstad, Curaçao</strong>
+          <span>+599 966 72745</span>
+        </div>
+        <a href="mailto:info@sardionix.com" class="contact-email">info@sardionix.com</a>
+      </div>
+      <form class="reveal" id="contactForm" novalidate name="contact" data-netlify="true"
+        data-netlify-honeypot="website">
+        <!-- Netlify required: tells Netlify which form this is -->
+        <input type="hidden" name="form-name" value="contact">
+        <!-- Honeypot: hidden from humans, spam bots fill it in (also used by Netlify) -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"
+          style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;">
+        <input type="text" name="name" id="fname" placeholder="Your Name" required maxlength="100" autocomplete="name"
+          pattern="[A-Za-zÀ-ÖØ-öø-ÿ '\-]{2,100}" title="Name must be 2–100 characters (letters only)" />
+        <input type="email" name="email" id="femail" placeholder="Email Address" required maxlength="254"
+          autocomplete="email" />
+        <select name="service" id="fservice" required>
+          <option value="" disabled selected>Select a Service</option>
+          <option value="food-safety">Food Safety Audit</option>
+          <option value="hygiene">Industrial Hygiene Consulting</option>
+          <option value="pest">Pest &amp; Mosquito Control</option>
+          <option value="supply">Branded Product Supply</option>
+          <option value="tech">Technical Support</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea name="message" id="fmessage" placeholder="Tell us about your needs..." maxlength="2000"></textarea>
+        <button type="submit" id="fsubmit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo footer-logo">
+        <img src="Content/RealLogo.svg" alt="Sardionix S&amp;S Ltd" class="nav-logo-img" />
+      </a>
+      <p>Supply Simplified. Service Amplified.<br />Multidisciplinary solutions in industrial hygiene, food safety, and
+        supply across Suriname &amp; Curaçao.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Industrial Hygiene</a></li>
+        <li><a href="#services">Food Safety</a></li>
+        <li><a href="#services">Technical Support</a></li>
+        <li><a href="#services">Product Supply</a></li>
+        <li><a href="#services">Pest Control</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#booking">Book a Service</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+
+</html>
