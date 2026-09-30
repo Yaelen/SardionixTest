@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────
      HAMBURGER MENU
-     No inline onclick attrs — all wired here
+     No inline onclick attrs, all wired here
   ───────────────────────────────────────── */
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -33,7 +33,7 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 /* ─────────────────────────────────────────
    SERVICES EXPAND
-   Wired here — no inline onclick in HTML
+   Wired here, no inline onclick in HTML
 ───────────────────────────────────────── */
 function expandCol(col) {
   document.querySelectorAll('.svc-col').forEach(c => c.classList.remove('active'));
@@ -44,102 +44,36 @@ document.querySelectorAll('.svc-col').forEach(col => {
 });
 
 /* ─────────────────────────────────────────
-   CONTACT FORM — hardened
-   Protections:
-     1. Honeypot field check (bot detection)
-     2. Rate-limit: 1 submission per 60 s
-     3. Input length + pattern validation
-     4. textContent used for feedback (never innerHTML)
+   NIGHT MODE TOGGLE
+   Initial theme is set by theme.js in <head>
 ───────────────────────────────────────── */
-const RATE_LIMIT_MS = 60_000; // 60 seconds between submissions
-let lastSubmit = 0;
+const root = document.documentElement;
+const themeToggle = document.getElementById('themeToggle');
 
-// Allowed service values — reject anything else
-const VALID_SERVICES = new Set([
-  'food-safety', 'hygiene', 'pest', 'supply', 'tech', 'other'
-]);
-
-function sanitizeText(str, maxLen) {
-  // Strip all HTML tags and limit length
-  return str.replace(/<[^>]*>/g, '').trim().slice(0, maxLen);
+function syncThemeToggle() {
+  themeToggle.setAttribute('aria-pressed', String(root.getAttribute('data-theme') === 'dark'));
 }
+themeToggle.addEventListener('click', () => {
+  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  try { localStorage.setItem('theme', next); } catch (e) { /* storage blocked: still works for this visit */ }
+});
+new MutationObserver(syncThemeToggle).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+syncThemeToggle();
 
-function showFormError(btn, msg) {
-  btn.textContent = msg;
-  btn.style.background = '#c0392b';
-  setTimeout(() => {
-    btn.textContent = 'Send Message';
-    btn.style.background = '';
-  }, 3500);
-}
-
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  const btn = document.getElementById('fsubmit');
-  const honey = this.elements['website'];
-  const name = sanitizeText(document.getElementById('fname').value, 100);
-  const email = sanitizeText(document.getElementById('femail').value, 254);
-  const service = document.getElementById('fservice').value;
-  const message = sanitizeText(document.getElementById('fmessage').value, 2000);
-
-  // 1. Honeypot: a real user leaves this blank
-  if (honey && honey.value.trim() !== '') return; // silent drop — don't tell bots
-
-  // 2. Rate limit
-  const now = Date.now();
-  if (now - lastSubmit < RATE_LIMIT_MS) {
-    showFormError(btn, 'Please wait before submitting again.');
-    return;
-  }
-
-  // 3. Basic validation
-  if (name.length < 2) {
-    showFormError(btn, 'Please enter your name.');
-    return;
-  }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    showFormError(btn, 'Please enter a valid email.');
-    return;
-  }
-  if (!VALID_SERVICES.has(service)) {
-    showFormError(btn, 'Please select a service.');
-    return;
-  }
-  if (message.length < 10) {
-    showFormError(btn, 'Please add a short message.');
-    return;
-  }
-
-  // All checks passed — submit to Netlify Forms via fetch
-  lastSubmit = now;
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
-
-  const formData = new URLSearchParams({
-    'form-name': 'contact',
-    name, email, service, message
+/* ─────────────────────────────────────────
+   LANGUAGE SLIDER
+   Slide the thumb first, then go to the other language (same section)
+───────────────────────────────────────── */
+document.querySelectorAll('.lang-switch .lang-opt:not([aria-current])').forEach(a => {
+  a.addEventListener('click', e => {
+    if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
+    e.preventDefault();
+    a.closest('.lang-switch').dataset.active = a.lang;
+    const target = a.href.split('#')[0] + location.hash;
+    const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 220;
+    setTimeout(() => { location.href = target; }, delay);
   });
-
-  fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: formData.toString()
-  })
-    .then(() => {
-      btn.textContent = '✓ Message sent!';
-      btn.style.background = '#27ae60';
-      this.reset();
-      setTimeout(() => {
-        btn.textContent = 'Send Message';
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 4000);
-    })
-    .catch(() => {
-      showFormError(btn, 'Something went wrong — try again.');
-      btn.disabled = false;
-    });
 });
 
 /* ─────────────────────────────────────────
